@@ -1,0 +1,42 @@
+﻿<Window x:Class="rekenmachine.WeightWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gewicht Conversie" Height="450" Width="800" Background="DarkBlue">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="188*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" Background="LightGreen" Text="Gewicht Conversie" FontSize="20" Width="800"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="104,94,0,0" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBox x:Name="txtInput" Width="100"/>
+                <ComboBox x:Name="cmbFromUnit" Width="80" Margin="10 0 0 0">
+                    <ComboBoxItem Content="Kilogram"/>
+                    <ComboBoxItem Content="Pound"/>
+                    <ComboBoxItem Content="Gram"/>
+                    <ComboBoxItem Content="Ounce"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtOutput" Width="100" IsReadOnly="True"/>
+                <ComboBox x:Name="cmbToUnit" Width="80" Margin="10 0 0 0">
+                    <ComboBoxItem Content="Kilogram"/>
+                    <ComboBoxItem Content="Pound"/>
+                    <ComboBoxItem Content="Gram"/>
+                    <ComboBoxItem Content="Ounce"/>
+                </ComboBox>
+            </StackPanel>
+            <Button Content="Converteren" Width="80" Margin="0 20 0 0" Click="ConvertButton_Click"/>
+        </StackPanel>
+        <TextBlock x:Name="txtLastConversions" HorizontalAlignment="Left" Margin="348,60,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="275" Width="267"/>
+        <ComboBox HorizontalAlignment="Left" Margin="680,13,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Rekenmachine" Tag="Rekenmachine" />
+            <ComboBoxItem Content="Valuta" Tag="valuta" />
+            <ComboBoxItem Content="Graden naar radialen" Tag="deg_to_rad" />
+            <ComboBoxItem Content="Volume" Tag="Volume" />
+            <ComboBoxItem Content="Nummer" Tag="Nummer" />
+            <ComboBoxItem Content="Afstand" Tag="Afstand" />
+        </ComboBox>
+    </Grid>
+</Window>
